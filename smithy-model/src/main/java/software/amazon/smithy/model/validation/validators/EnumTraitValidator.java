@@ -70,12 +70,6 @@ public final class EnumTraitValidator extends AbstractValidator {
                     events.add(error(shape, trait, String.format(
                             "Duplicate enum trait values found with the same `name` property of '%s'", name)));
                 }
-                if (!RECOMMENDED_NAME_PATTERN.matcher(name).find()) {
-                    events.add(warning(shape, trait, String.format(
-                            "The name `%s` does not match the recommended enum name format of beginning with an "
-                            + "uppercase letter, followed by any number of uppercase letters, numbers, or underscores.",
-                            name)));
-                }
             }
         }
 
